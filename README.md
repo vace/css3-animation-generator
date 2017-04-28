@@ -7,7 +7,8 @@
 [chrome应用商店安装地址https://chrome.google.com/webstore/detail/lhbbbidpkalopmenjffckblgbdhcffpa](https://chrome.google.com/webstore/detail/lhbbbidpkalopmenjffckblgbdhcffpa)
 
 ### 2.直接下载crx文件
-[下载地址]()
+如果无法访问到chrome的应用商城，可以选择下载`app.crx`文件,在chrome中打开`chrome://extensions/`页面，将`app.crx`插件拖动到扩展程序面板即可完成安装。
+[下载地址](https://github.com/vace/css3-animation-generator/releases/tag/v0.0.1)
 
 ### 3.自行构建
 - `npm install -g vue-cli`
@@ -22,6 +23,10 @@
 3. 如果定义了Id，则使用id选择器，如 `<span id="anim1">animate it</span>`
 4. 如果都不存在，则使用内部自定义的选择器查找方案
 
+
+## 例子
+
+![使用演示](static/usedemo.gif)
 
 ## Remark
 
