@@ -4,7 +4,7 @@
 
 ## 使用
 ### 1.从chrome webstore下载
-[chrome应用商店安装地址https://chrome.google.com/webstore/detail/lhbbbidpkalopmenjffckblgbdhcffpa](https://chrome.google.com/webstore/detail/lhbbbidpkalopmenjffckblgbdhcffpa)
+[chrome应用商店安装地址](https://chrome.google.com/webstore/detail/lhbbbidpkalopmenjffckblgbdhcffpa)
 
 ### 2.直接下载crx文件
 如果无法访问到chrome的应用商城，可以选择下载`app.crx`文件,在chrome中打开`chrome://extensions/`页面，将`app.crx`插件拖动到扩展程序面板即可完成安装。
@@ -27,6 +27,9 @@
 ## 例子
 
 ![使用演示](static/usedemo.gif)
+
+## tips
+这是第一版本，因为部分脚本中使用的呢 javascript 的`Set`，所以大家尽量升级 chrome 到比较新的版本。本人测试使用的是 360 最新版本和 chrome50+都可以正常使用！导出的动画可能需要加前缀才可以兼容所有浏览器，推荐大家使用autoprefix，或者使用在线版本的http://autoprefixer.github.io/，后期考虑加入这个功能。
 
 ## Remark
 
