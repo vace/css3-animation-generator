@@ -29,7 +29,7 @@
 ![使用演示](static/usedemo.gif)
 
 ## tips
-这是第一版本，因为部分脚本中使用的呢 javascript 的`Set`，所以大家尽量升级 chrome 到比较新的版本。本人测试使用的是 360 最新版本和 chrome50+都可以正常使用！导出的动画可能需要加前缀才可以兼容所有浏览器，推荐大家使用autoprefix，或者使用在线版本的http://autoprefixer.github.io/，后期考虑加入这个功能。
+部分脚本中使用了 javascript 的`Set`，请尽量升级 chrome 到比较新的版本。测试使用的chrome48+都可以正常使用！导出的动画可能需要加前缀才可以兼容所有浏览器，推荐使用[autoprefix](http://autoprefixer.github.io/)，后期考虑加入这个功能。
 
 ## Remark
 
