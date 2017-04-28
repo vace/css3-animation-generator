@@ -1,0 +1,23 @@
+{
+  "name": "css3-animation-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "iview": "^2.0.0-rc.10",
+    "vue": "^2.2.6",
+    "vuex": "^2.3.0"
+  },
+  "scripts": {
+    "dev": "vue-build src/main.js -c ./vue-build.config.js",
+    "build": "vue-build src/main.js --dist ./dist --prod -c ./vue-build.config.js",
+    "content": "babel src/content-script.js --out-file ./static/content-script.js --presets=es2015,babili",
+    "make": "sh gen/make.sh",
+    "app":"npm run build && npm run content && npm run make"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babili": "^0.0.12"
+  }
+}

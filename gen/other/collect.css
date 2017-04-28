@@ -1,0 +1,11 @@
+@keyframes rotate360 {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse360{
+  to{
+    transform: rotate(-360deg);
+  }
+}

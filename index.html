@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css3Animation</title>
+    <style>
+  .cssload-loader {
+    position: absolute;
+    left: 50%;
+    width: 39px;
+    height: 39px;
+    top:50%;
+    margin-top: -19px;
+    margin-left: -19px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: 1.44s cssload-spin cubic-bezier(0.46, -0.4, 0.2, 1.51) infinite both;
+  }
+
+  .cssload-loader:before, .cssload-loader:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 19px solid black;
+    border-top-color: rgb(250,66,72);
+    border-left-color: rgb(93,219,186);
+    border-bottom-color: rgb(237,230,112);
+    border-right-color: rgb(100,195,242);
+  }
+  .cssload-loader:before {
+    filter: blur(2px);
+  }
+  .cssload-loader:after {
+    animation: 1.44s cssload-normal-opacity cubic-bezier(0.46, -0.4, 0.2, 1.51) infinite both;
+  }
+
+  @keyframes cssload-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-2160deg);
+    }
+  }
+
+  @keyframes cssload-normal-opacity {
+    0% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0;
+    }
+    55% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <div id="app" style="width:100%;height:100%;">
+      <div class="cssload-loader"></div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
