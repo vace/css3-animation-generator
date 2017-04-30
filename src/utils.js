@@ -31,3 +31,16 @@ export function multiReplace(string,replaces){
   }
   return string
 }
+
+var i18n = chrome.i18n
+
+if(process.env.NODE_ENV === 'development'){
+  var json = require('./languages/zh_CN/messages.json')
+  i18n = {
+    getMessage:name => json[name].message || ''
+  }
+}
+
+export function lang(name){
+  return i18n.getMessage(name)
+}

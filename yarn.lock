@@ -1155,9 +1155,9 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "http://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-iview:
-  version "2.0.0-rc.10"
-  resolved "http://registry.npm.taobao.org/iview/download/iview-2.0.0-rc.10.tgz#6f5970d941ae8a2863cc521e6d1ec8f9d89bfacb"
+iview@2.0.0-rc.12:
+  version "2.0.0-rc.12"
+  resolved "http://registry.npm.taobao.org/iview/download/iview-2.0.0-rc.12.tgz#f82bae94c08a992221da28a4a7c3febda854d0cb"
   dependencies:
     async-validator "^1.6.7"
     core-js "^2.4.1"

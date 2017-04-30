@@ -108,7 +108,6 @@ window.css3AnimationGenerator =
       return style.options
     },
     _exportBlank:function(animations,keyframes){
-      console.log('start export')
       var win = window.open()
       win.document.title = 'css3-animation-generator'
       win.document.write(exportHtml(animations,keyframes));
@@ -236,7 +235,10 @@ window.css3AnimationGenerator =
   }
 
   function exportHtml(animations,keyframes){
-    const CDN_BASE = '//cdn.bootcss.com/codemirror/5.25.0'
+    let CDN_BASE = '//cdn.bootcss.com/codemirror/5.25.0'
+    if(typeof chrome === 'object' && chrome.extension){
+      CDN_BASE = chrome.extension.getURL('static/codemirror5.25.0')
+    }
 // const CDN_BASE = '//unpkg.com/codemirror@5.25.2/'
 
     return  `
@@ -268,10 +270,10 @@ window.css3AnimationGenerator =
   }
 </style>
 <link href="${CDN_BASE}/codemirror.min.css" rel="stylesheet">
-<link href="${CDN_BASE}/addon/hint/show-hint.css" rel="stylesheet">
+<link href="${CDN_BASE}/addon/hint/show-hint.min.css" rel="stylesheet">
 <link href="${CDN_BASE}/theme/monokai.min.css" rel="stylesheet">
 <script charset="utf-8" src="${CDN_BASE}/codemirror.min.js"></script>
-<script charset="utf-8" src="${CDN_BASE}/addon/hint/show-hint.js"></script>
+<script charset="utf-8" src="${CDN_BASE}/addon/hint/show-hint.min.js"></script>
 <script charset="utf-8" src="${CDN_BASE}/mode/css/css.min.js"></script>
 <script charset="utf-8" src="${CDN_BASE}/addon/hint/css-hint.min.js"></script>
 <div class="app">

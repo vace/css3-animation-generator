@@ -9,7 +9,7 @@
   <Form :model="animation" :label-width="80">
     <Row>
       <Col span="21">
-        <Form-item label="名称">
+        <Form-item :label="'parameter_name' | lang">
           <Select v-model="animation.id" placeholder="animation-name" @input="changeAnimation" filterable clearable>
             <Option v-for="anim in CurrentAnimations" :label="anim.name" :value="anim.id" :key="anim.id">
               <span>{{ anim.name }}</span>
@@ -19,48 +19,48 @@
         </Form-item>
       </Col>
       <Col span="3">
-        <Poptip trigger="hover" title="移除动画" content="如果元素已经设置了动画，则移除当前选中元素的动画！" placement="bottom-end" style="float:right;">
+        <Poptip trigger="hover" :title="'parameter_remove' | lang" :content="'parameter_remove_tips' | lang" placement="bottom-end" style="float:right;">
             <Button @click="removeAnimation" type="info" shape="circle" icon="flash-off"></Button>
         </Poptip>
       </Col>
     </Row>
-    <Form-item label="持续时间">
+    <Form-item :label="'parameter_slider' | lang">
       <Slider v-model="animation.slider" range :tip-format="sliderTips" :step="100" :max="10000"></Slider>
     </Form-item>
 
     <Row>
       <Col span="12">
-        <Form-item label="播放顺序">
+        <Form-item :label="'parameter_direction' | lang">
           <Select v-model="animation.direction" placeholder="animation-direction">
             <Option v-for="n in direction" :value="n" :key="n">{{ n }}</Option>
           </Select>
         </Form-item>
       </Col>
       <Col span="12">
-        <Form-item label="目标样式">
+        <Form-item :label="'parameter_fill_mode' | lang">
           <Select v-model="animation.fillMode" placeholder="animation-fill-mode">
             <Option v-for="n in fillMode" :value="n" :key="n">{{ n }}</Option>
           </Select>
         </Form-item>
       </Col>
       <Col span="12">
-        <Form-item label="执行节奏">
+        <Form-item :label="'parameter_timing' | lang">
           <Select v-model="animation.timing" placeholder="animation-timing-function">
             <Option v-for="n in timing" :value="n" :key="n">{{ n }}</Option>
           </Select>
         </Form-item>
       </Col>
       <Col span="12">
-         <Form-item label="运行次数">
+         <Form-item :label="'parameter_count' | lang">
           <Input-number :max="10000" :min="1" v-model="animation.count"></Input-number>
-          <Checkbox v-model="animation.infinite">infinite</Checkbox>
+          <Checkbox v-model="animation.infinite">{{ 'parameter_infinite' | lang }}</Checkbox>
         </Form-item>
       </Col>
     </Row>
 
     <Form-item>
-      <Button :disabled="!animation.id" @click="previewAnimation" type="primary">预览动画</Button>
-      <Button @click="exportAnimation" type="info" style="margin-left: 8px">导出动画</Button>
+      <Button :disabled="!animation.id" @click="previewAnimation" type="primary">{{ 'parameter_preview' | lang }}</Button>
+      <Button @click="exportAnimation" type="info" style="margin-left: 8px">{{ 'parameter_export' | lang }}</Button>
     </Form-item>
 
   </Form>
@@ -68,6 +68,7 @@
 </template>
 <script>
   import {mapGetters} from 'vuex'
+  import {lang} from '../utils'
 
   const _defaultAnimation = {
     id: '',
@@ -89,6 +90,7 @@
         timing:['ease','linear','ease-in','ease-out','ease-in-out','step-start','step-end','steps']
       }
     },
+    filters:{lang},
     computed:mapGetters(['CurrentAnimations']),
     mounted(){
       // 元素面板切换element，切换后获取当前element的config

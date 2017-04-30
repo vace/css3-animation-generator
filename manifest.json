@@ -21,7 +21,8 @@
         "js": ["static/content-script.js"]
         }
     ],
-    
+    "default_locale":"zh_CN",
+    "web_accessible_resources":["static/*/*"],
     "permissions": [
         "debugger",
         "notifications",
