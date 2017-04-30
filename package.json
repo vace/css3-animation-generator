@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "iview": "^2.0.0-rc.10",
+    "iview": "2.0.0-rc.12",
     "vue": "^2.2.6",
     "vuex": "^2.3.0"
   },
@@ -13,7 +13,7 @@
     "build": "vue-build src/main.js --dist ./dist --prod -c ./vue-build.config.js",
     "content": "babel src/content-script.js --out-file ./static/content-script.js --presets=es2015,babili",
     "make": "sh gen/make.sh",
-    "app":"npm run build && npm run content && npm run make"
+    "app": "npm run build && npm run content && npm run make"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
