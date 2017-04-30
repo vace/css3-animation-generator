@@ -1,0 +1,47 @@
+{
+  "parameter_name": {
+    "message": "名称",
+    "description": "animation name"
+  },
+  "parameter_remove": {
+    "message": "移除动画",
+    "description": "remove animation"
+  },
+  "parameter_remove_tips": {
+    "message": "如果元素已经设置了动画，则移除当前选中元素的动画！",
+    "description": "移除动画的animation"
+  },
+  "parameter_slider": {
+    "message": "持续时间",
+    "description": "animation duration"
+  },
+
+  "parameter_direction": {
+    "message": "播放顺序",
+    "description": "animation direction"
+  },
+  "parameter_fill_mode": {
+    "message": "目标样式",
+    "description": "animation fill mode"
+  },
+  "parameter_timing": {
+    "message": "执行节奏",
+    "description": "animation timing function"
+  },
+  "parameter_count": {
+    "message": "运行次数",
+    "description": "animation count"
+  },
+  "parameter_infinite": {
+    "message": "循环播放",
+    "description": "animation infinite"
+  },
+  "parameter_preview": {
+    "message": "预览动画",
+    "description": "preview animation"
+  },
+  "parameter_export": {
+    "message": "导出动画",
+    "description": "animation"
+  }
+}

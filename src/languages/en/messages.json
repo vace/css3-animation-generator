@@ -1,0 +1,47 @@
+{
+  "parameter_name": {
+    "message": "name",
+    "description": "animation name"
+  },
+  "parameter_remove": {
+    "message": "remove animation",
+    "description": "remove animation"
+  },
+  "parameter_remove_tips": {
+    "message": "If the element has already been animated, remove the animation of the currently selected element!",
+    "description": "If the element has already been animated, remove the animation of the currently selected element!"
+  },
+  "parameter_slider": {
+    "message": "duration",
+    "description": "animation duration"
+  },
+
+  "parameter_direction": {
+    "message": "direction",
+    "description": "animation direction"
+  },
+  "parameter_fill_mode": {
+    "message": "fill mode",
+    "description": "animation fill mode"
+  },
+  "parameter_timing": {
+    "message": "timing",
+    "description": "animation timing function"
+  },
+  "parameter_count": {
+    "message": "run times",
+    "description": "animation count"
+  },
+  "parameter_infinite": {
+    "message": "loop play",
+    "description": "animation infinite"
+  },
+  "parameter_preview": {
+    "message": "preview animation",
+    "description": "preview animation"
+  },
+  "parameter_export": {
+    "message": "export animation",
+    "description": "animation"
+  }
+}
