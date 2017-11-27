@@ -1,4 +1,3 @@
-
 const KeyFramesRegex = /@keyframes(.*){([^{}]*{[^}]*})*[^}]*}/ig
 
 /**
@@ -17,6 +16,14 @@ function genKeyframes(cssText){
   return result
 }
 
+function covertKeyFramesMap(keyframes) {
+  var object = Object.create(null)
+  keyframes.forEach(({name, keyframe}) => {
+    object[name] = keyframe
+  })
+  return object
+}
+
 const hyphenateRE = /([^-])([A-Z])/g
 
 function hyphenate(str){
@@ -28,5 +35,5 @@ function hyphenate(str){
 
 
 module.exports = {
-  genKeyframes,hyphenate
+  genKeyframes, covertKeyFramesMap ,hyphenate
 }

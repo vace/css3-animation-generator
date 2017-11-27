@@ -48,21 +48,22 @@ export const CurrentTags = ({librarys,filters},getters) => {
 export const CurrentAnimations = ({librarys,filters},getters) => {
   var library = getters.CurrentLibray
   var group_name = filters.group_name
-  var filter_tags = filters.tags || []
-  var hasTag = filter_tags.length > 0
-  return cacher(`anim_${filters.library_id}_${group_name}`,() => {
+  // var filter_tags = filters.tags || []
+  // var hasTag = filter_tags.length > 0
+  var tag = filters.tag || ''
+  return cacher(`anim_${filters.library_id}_${group_name}_${tag}`, () => {
     var filters = library.animations.filter(({group,tags}) => {
       // 找到指定分组，使用tag过滤
       if('*' === group_name || group === group_name){
-        if(hasTag && tags){
-          return tags.some(tag => filter_tags.indexOf(tag) !== -1)
+        if (tag){
+          return tags.indexOf(tag) !== -1
         }
         return true
       }
       return false
     })
     return filters
-  },hasTag)
+  })
 }
 
 

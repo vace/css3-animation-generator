@@ -2,7 +2,7 @@
   <div class="layout-library">
     <Menu mode="horizontal" theme="dark" :active-name="0" @on-select="changeLibrary">
      <div class="layout-nav">
-       <Menu-item :name="idx" :key="name" v-for="(name,idx) in AnimateLibrarys">
+       <Menu-item :name="idx" :key="name" v-for="(name,idx) in AnimateLibrarys" style="padding-left:10px;padding-right:10px;">
          <Icon type="social-css3"></Icon>
          {{ name }}
        </Menu-item>

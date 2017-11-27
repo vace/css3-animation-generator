@@ -15,7 +15,8 @@ export default new Vuex.Store({
     filters:{
       library_id:0, // 选择的库id
       group_name:'*', // 选择的分组id
-      tags:[],  // 筛选的tags
+      tag: '',
+      // tags:[],  // 筛选的tags
       keyword:[], // 筛选额keyword
     },
     librarys,

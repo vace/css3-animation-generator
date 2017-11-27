@@ -13,15 +13,15 @@ export function cacher(key,callback,mustCall /* 强制执行此回调 */){
 }
 
 export function encodeScriptCode(code) {
-    return multiReplace(code, [
-        [/\\/g, "\\u005C"],
-        [/"/g, "\\u0022"],
-        [/'/g, "\\u0027"],
-        [/\//g, "\\u002F"],
-        [/\r/g, "\\u000A"],
-        [/\n/g, "\\u000D"],
-        [/\t/g, "\\u0009"]
-    ]);
+  return multiReplace(code, [
+    [/\\/g, "\\u005C"],
+    [/"/g, "\\u0022"],
+    [/'/g, "\\u0027"],
+    [/\//g, "\\u002F"],
+    [/\r/g, "\\u000A"],
+    [/\n/g, "\\u000D"],
+    [/\t/g, "\\u0009"]
+  ]);
 }
 
 export function multiReplace(string,replaces){

@@ -1,4 +1,7 @@
 module.exports = {
+  entry: {
+    index: 'main.js'
+  },
   autoprefixer:{
     browsers:['last 1 versions']
   },

@@ -1,8 +1,8 @@
 <template>
  <div class="layout">
    <LibraryHeader />
-   <TagFilter />
    <Parameter />
+   <TagFilter />   
    <LibraryDetail />
    <PublicFooter />
  </div>
@@ -37,7 +37,6 @@
     left: 20px;
   }
   .layout-nav{
-    width: 420px;
     margin: 0 auto;
   }
   .layout-assistant{

@@ -5,7 +5,8 @@ cp -r manifest.json ./app/
 cp -r dist/*.js ./app
 cp -r dist/*.css ./app
 cp -r dist/*.html ./app
-cp -r dist/static/*.woff ./app/static/
+# cp -r dist/static/*.woff ./app/static/
+cp -r dist/assets ./app
 cp -r static/*.js ./app/static/
 cp -r static/*.html ./app/static/
 cp -r static/icon/*.png ./app/static/icon/
